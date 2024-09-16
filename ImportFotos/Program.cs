@@ -14,13 +14,26 @@ namespace ImportFotos
                 var fotosProjeto1 = await contextProjeto1.Usuarios
                     .Where(u => u.Foto != null)
                     .Include(u => u.Identificacao)
-                    .Select(u => new { u.Identificacao.NumeroIdentificacao, u.Foto })
+                    .Select(u => new Usuario
+                    {
+                        Id = u.Id,
+                        Foto = u.Foto,
+                        IdentificacaoId = u.IdentificacaoId,
+                        Identificacao = u.Identificacao
+                        
+                    })
                     .ToListAsync();
                 
                 var identificacoesProjeto2 = await contextProjeto2.Usuarios
                     .Where(u => u.Foto == null)
                     .Include(u => u.Identificacao)
-                    .Select(u => new { u.Id, u.Identificacao.NumeroIdentificacao })
+                    .Select(u => new Usuario
+                    {
+                       Id = u.Id, 
+                       Foto = u.Foto,
+                       IdentificacaoId = u.IdentificacaoId,
+                       Identificacao = u.Identificacao
+                    })
                     .ToListAsync();
                 
                 var caminhoOrigem = "/caminho/para/fotos/projeto1";
@@ -46,15 +59,15 @@ namespace ImportFotos
         }
 
         public async Task MigrarFotos(
-            List<dynamic> fotosProjeto1, 
-            List<dynamic> identificacoesProjeto2, 
+            List<Usuario> fotosProjeto1, 
+            List<Usuario> identificacoesProjeto2, 
             MeuDbContextProjeto2 contextProjeto2)
         {
             foreach (var foto in fotosProjeto1)
             {
-                var identificacaoProjeto1 = foto.Identificacao;
+                var identificacaoProjeto1 = foto.Identificacao.NumeroIdentificacao;
                 
-                var usuarioProjeto2 = identificacoesProjeto2.FirstOrDefault(u => u.Identificacao == identificacaoProjeto1);
+                var usuarioProjeto2 = identificacoesProjeto2.FirstOrDefault(u => u.Identificacao.NumeroIdentificacao == identificacaoProjeto1);
 
                 if (usuarioProjeto2 != null)
                 {

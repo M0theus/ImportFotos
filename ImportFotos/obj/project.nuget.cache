@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tRbLuGIro6E=",
+  "dgSpecHash": "8ZoYKytCOVw=",
   "success": true,
-  "projectFilePath": "/home/matheus/dev/Projetos_Pessoais/backend/ImportFotos/ImportFotos/ImportFotos.csproj",
+  "projectFilePath": "/home/matheus/dev/ImportFotos/ImportFotos/ImportFotos.csproj",
   "expectedPackageFiles": [
     "/home/matheus/.nuget/packages/microsoft.entityframeworkcore/6.0.0/microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "/home/matheus/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.0/microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",

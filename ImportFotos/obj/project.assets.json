@@ -722,11 +722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matheus/dev/Projetos_Pessoais/backend/ImportFotos/ImportFotos/ImportFotos.csproj",
+      "projectUniqueName": "/home/matheus/dev/ImportFotos/ImportFotos/ImportFotos.csproj",
       "projectName": "ImportFotos",
-      "projectPath": "/home/matheus/dev/Projetos_Pessoais/backend/ImportFotos/ImportFotos/ImportFotos.csproj",
+      "projectPath": "/home/matheus/dev/ImportFotos/ImportFotos/ImportFotos.csproj",
       "packagesPath": "/home/matheus/.nuget/packages/",
-      "outputPath": "/home/matheus/dev/Projetos_Pessoais/backend/ImportFotos/ImportFotos/obj/",
+      "outputPath": "/home/matheus/dev/ImportFotos/ImportFotos/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/matheus/.nuget/NuGet/NuGet.Config"
@@ -768,8 +768,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -778,7 +777,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.132/RuntimeIdentifierGraph.json"
       }
     }
   }
