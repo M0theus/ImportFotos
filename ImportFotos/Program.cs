@@ -104,9 +104,12 @@ namespace ImportFotos
             var usuario = await contextProjeto2.Usuarios.FirstOrDefaultAsync(u => u.Id == usuarioId);
             if (usuario != null)
             {
-                usuario.Foto = novoNomeArquivo;
+                var urlFoto = $"https://api.sysra-h.maracanau.ifce.edu.br/assets/private/foto_usuarios/{novoNomeArquivo}";
+                
+                usuario.Foto = urlFoto;
                 await contextProjeto2.SaveChangesAsync();
-                Console.WriteLine($"Foto do usuário {usuarioId} atualizada no banco de dados do projeto 2.");
+                
+                Console.WriteLine($"Foto do usuário {usuarioId} atualizada no banco de dados projeto 2 com a URL: {urlFoto}");
             }
         }
     }
